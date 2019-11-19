@@ -51,7 +51,7 @@ streaming, offline, failed = False, False, False
 
 while True:
     try:
-        res = requests.head('http://www.templeos.org/hls/templeos.m3u8', timeout=3)
+        res = requests.head('http://ion.spawn.link:31337/live/tos-unsafe.m3u8', timeout=3)
         if res.reason == "OK":
             if streaming == False:
                 streaming, offline, failed = isstreaming()
